@@ -3,4 +3,4 @@ Aplicação de testes para aprendizagem do React Native
 
 
 
-`npm install`
+First of all ==> `npm install`
