@@ -5,13 +5,17 @@ const styles = StyleSheet.create({
     container: {
         flex : 1 ,
         justifyContent: 'center',
-        backgroundColor: '#16a085'
-        
+        backgroundColor: '#fff'
+    },
+    logoContainer:{
+        marginBottom: 30,
+        flexDirection: 'row',
+        flex: 1
     },
     textArea: {
+        backgroundColor: '#ecf0f1',
         fontSize: 20,
         textAlign: 'center',
-        backgroundColor: '#fff',
         height: 45,
         padding: 10,
         margin: 10
@@ -19,7 +23,7 @@ const styles = StyleSheet.create({
     button: {
         margin: 20,
         padding: 20,
-    }
+    },
 })
 
 export default styles;

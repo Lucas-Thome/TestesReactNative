@@ -23,7 +23,6 @@ class Clock extends Component{
     }
 }
 
-
 export default class ClockApp extends Component {
   render() {
     return(

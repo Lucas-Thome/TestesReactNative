@@ -8,7 +8,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     logoContainer: {
-        margin: 15
+        margin: 15,
+        marginBottom: 50
     },
     textInput: {
         margin: 10,

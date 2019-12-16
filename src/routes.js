@@ -14,6 +14,9 @@ import Clock from './Clock';
 import Register from './Register';
 import SignIn from './SingIn';
 import PizzaTranslator from './PizzaTranslator';
+import ProgressBar from './ProgressBar'
+import List from './List';
+import Movies from './Movies'
 
 const AuthStack = createStackNavigator({
   Landing: {
@@ -34,18 +37,6 @@ const AuthStack = createStackNavigator({
       headerTitle: 'Criar Conta',
     },
   },
-  ForgotPassword: {
-    screen: Example,
-    navigationOptions: {
-      headerTitle: 'Forgot Password',
-    },
-  },
-  ResetPassword: {
-    screen: Example,
-    navigationOptions: {
-      headerTitle: 'Reset Password',
-    },
-  },
   Início: {
     screen: Main,
     navigationOptions: {
@@ -64,6 +55,24 @@ const AuthStack = createStackNavigator({
       headerTitle: 'Tradutor Pizza'
     }
   },
+  ProgressBar: {
+    screen: ProgressBar,
+    navigationOptions:{
+      headerTitle: 'Barra de Progresso'
+    }
+  },
+  List: {
+    screen: List,
+    navigationOptions: {
+      headerTitle: 'Lista'
+    }
+  },
+  Movies: {
+    screen: Movies,
+    navigationOptions: {
+      headerTitle: 'Filmes'
+    }
+  }
 });
 
 export default createAppContainer(AuthStack); // Entry point
