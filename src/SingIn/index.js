@@ -2,20 +2,24 @@ import React, { Component } from 'react';
 
 import { 
     View,
+    Text,
     TextInput,
     Button,
     Alert,
     Image,
-    KeyboardAvoidingView, // Para o teclado não tampar os inputs
- } from 'react-native';
+    KeyboardAvoidingView,  // Para o teclado não tampar os inputs
+    Linking,
+    TouchableOpacity  
+} from 'react-native';
+import {createSwitchNavigator} from 'react-navigation';
 
 import styles from './styles';
 import SttsBar from '../StatusBar'
 
 export default class SingIn extends Component {
+
   render() {
     return (
-        
         <KeyboardAvoidingView beahavior = 'padding' style = {styles.container}> 
             <SttsBar/>
             <View style = {styles.container}>
@@ -49,6 +53,14 @@ export default class SingIn extends Component {
                         title = "Entrar"
                         color = '#F76F1D'
                     />
+                </View>
+                <View>
+                    <Text 
+                        style = {styles.createAcc}
+                        onPress = {()=>Linking.openURL('http://google.com')}
+                    >
+                        Ainda não tem uma conta? Clique aqui
+                    </Text>
                 </View>
             </View>
             </KeyboardAvoidingView>    

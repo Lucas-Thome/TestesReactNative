@@ -14,9 +14,9 @@ import Clock from './Clock';
 import Register from './Register';
 import SignIn from './SingIn';
 import PizzaTranslator from './PizzaTranslator';
-import ProgressBar from './ProgressBar'
 import List from './List';
-import Movies from './Movies'
+import Movies from './Movies';
+import Chat from "./Chat";
 
 const AuthStack = createStackNavigator({
   Landing: {
@@ -55,12 +55,6 @@ const AuthStack = createStackNavigator({
       headerTitle: 'Tradutor Pizza'
     }
   },
-  ProgressBar: {
-    screen: ProgressBar,
-    navigationOptions:{
-      headerTitle: 'Barra de Progresso'
-    }
-  },
   List: {
     screen: List,
     navigationOptions: {
@@ -72,42 +66,22 @@ const AuthStack = createStackNavigator({
     navigationOptions: {
       headerTitle: 'Filmes'
     }
-  }
+  },
+  Chat: {
+    screen: Chat,
+    navigationOptions: {
+      headerTitle: 'Chat'
+    }
+  },
 });
 
-export default createAppContainer(AuthStack); // Entry point
+const MainNavigation = createDrawerNavigator({
+  Entrar: {
+    screen: SignIn
+  },
+  Landing: {
+    screen: AuthStack
+  }
+})
 
-
-
-  /* const MainTabs = createBottomTabNavigator({
-    Feed: {
-      screen: Example,
-      navigationOptions: {
-        tabBarLabel: 'Feed',
-      },
-    },
-    Search: {
-      screen: Example,
-      navigationOptions: {
-        tabBarLabel: 'Search',
-      },
-    },
-    Discover: {
-      screen: Example,
-      navigationOptions: {
-        tabBarLabel: 'Discover',
-      },
-    },
-  });
-  
-  const App = createSwitchNavigator({
-    Loading: {
-      screen: Example,
-    },
-    Auth: {
-      screen: AuthStack,
-    },
-    App: {
-      screen: MainTabs,
-    },
-  }); */
+export default createAppContainer(MainNavigation); // Entry point

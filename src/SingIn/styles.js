@@ -23,6 +23,10 @@ const styles = StyleSheet.create({
     button: {
         margin: 20,
         padding: 20
+    },
+    createAcc: {
+        color: '#0189A4',
+        marginLeft: 75
     }
 })
 
